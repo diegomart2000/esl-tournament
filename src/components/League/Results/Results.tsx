@@ -28,7 +28,7 @@ const sort = (results: Array<Result>, order: boolean): Array<Result> => {
 const ResultsComponent: React.FC<Props> = (props: Props) => {
   const { isFetching } = props;
   let { results } = props;
-  const [ order, setOrder ] = useState(true);
+  const [ order, setOrder ] = useState(false);
 
   return (
     <ResultsFrame>
