@@ -34,8 +34,8 @@ export const ResultParticipant = styled.div<{place?: number}>`
   align-items: center;
   margin-top: .8rem;
   border-left: 4px solid ${props => props.place === 1 ? 'green' : 'red'};
-  padding: .2rem .3rem .2rem .5rem;
-  border-radius: 0.2rem;
+  padding: 0 .3rem 0 .5rem;
+  border-radius: .2rem;
 
   > h3 {
     font-weight: ${props => props.place === 1 ? '600' : '400'};
