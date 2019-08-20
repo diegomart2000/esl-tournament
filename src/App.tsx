@@ -8,7 +8,6 @@ import League from './components/League';
 
 const AppContainer = styled.div`
   padding: 4rem;
-  
 `;
 
 const App: React.FC = () => {

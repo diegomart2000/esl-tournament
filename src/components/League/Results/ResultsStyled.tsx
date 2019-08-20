@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ResultsFrame = styled.div`
   margin-top: 1rem;
   padding: 1rem;
-  border-radius: 0.2rem;
+  border-radius: 0.1rem;
   background-color: white;
 `;
 
@@ -31,6 +31,7 @@ export const ResultItem = styled.div`
 export const ResultParticipant = styled.div<{place?: number}>`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: .8rem;
   border-left: 4px solid ${props => props.place === 1 ? 'green' : 'red'};
   padding: .2rem .3rem .2rem .5rem;
