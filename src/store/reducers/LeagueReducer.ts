@@ -1,22 +1,50 @@
 import {
-  LeagueState,
-
   GET_LEAGUE,
   GET_LEAGUE_SUCCESS,
   GET_LEAGUE_ERROR,
 
-  LeageActionTypes,
+  LeagueActionTypes,
 } from '../actions/types/LeagueTypes';
+
+import {
+  GET_RESULTS,
+  GET_RESULTS_SUCCESS,
+  GET_RESULTS_ERROR,
+
+  ResultActionTypes,
+} from '../actions/types/ResultTypes';
+
+import {
+  GET_CONTESTANTS,
+  GET_CONTESTANTS_SUCCESS,
+  GET_CONTESTANTS_ERROR,
+
+  ContestantActionTypes,
+} from '../actions/types/ContestantTypes';
+
+import { League, Result, Contestant } from '../../types';
+
+export interface LeagueState {
+  isFetching: boolean,
+  isFetchingResults: boolean,
+  league: League | null,
+  results: Array<Result> | null,
+  contestants: Array<Contestant> | null,
+  error: any
+}
 
 const initialState: LeagueState = {
   isFetching: false,
+  isFetchingResults: false,
   league: null,
+  results: null,
+  contestants: null,
   error: null,
 }
 
 const reducer = (
   state = initialState,
-  action: LeageActionTypes
+  action: LeagueActionTypes | ResultActionTypes | ContestantActionTypes
 ): LeagueState => {
   const { type, payload = {} } = action;
 
@@ -48,6 +76,44 @@ const reducer = (
         league: null,
         error,
       };
+    }
+
+    case GET_RESULTS: {
+      return {
+        ...state,
+        isFetchingResults: true,
+      }
+    }
+
+    case GET_RESULTS_SUCCESS: {
+      const { results } = payload;
+
+      return {
+        ...state,
+        isFetchingResults: false,
+        error: null,
+        results,
+      }
+    }
+
+    case GET_RESULTS_ERROR: {
+      const { error } = payload;
+
+      return {
+        ...state,
+        isFetchingResults: false,
+        results: null,
+        error,
+      };
+    }
+
+    case GET_CONTESTANTS_SUCCESS: {
+      const { contestants } = payload;
+
+      return {
+        ...state,
+        contestants,
+      }
     }
 
     default:

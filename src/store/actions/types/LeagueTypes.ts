@@ -1,32 +1,24 @@
-export interface League {
-  user: string
-  message: string
-  timestamp: number
-}
-
-export interface LeagueState {
-  isFetching: boolean,
-  league: League | null,
-  error: any
-}
+import { League } from '../../../types';
 
 export const GET_LEAGUE = 'GET_LEAGUE';
 export const GET_LEAGUE_SUCCESS = 'GET_LEAGUE_SUCCESS';
 export const GET_LEAGUE_ERROR = 'GET_LEAGUE_ERROR';
 
-interface GetLeageAction {
+interface GetLeagueAction {
   type: typeof GET_LEAGUE
   payload: number
 }
 
-interface GetLeageSuccessAction {
+interface GetLeagueSuccessAction {
   type: typeof GET_LEAGUE_SUCCESS
-  payload: League
+  payload: {
+    league: League
+  }
 }
 
-interface GetLeageErrorAction {
+interface GetLeagueErrorAction {
   type: typeof GET_LEAGUE_ERROR
   payload: any
 }
 
-export type LeageActionTypes = GetLeageAction | GetLeageSuccessAction | GetLeageErrorAction
+export type LeagueActionTypes = GetLeagueAction | GetLeagueSuccessAction | GetLeagueErrorAction

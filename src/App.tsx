@@ -1,22 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
+import { Provider } from 'react-redux';
+
+import store from './store';
+
+import League from './components/League';
+
+const AppContainer = styled.div`
+  padding: 4rem;
+  
+`;
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <AppContainer>
+        <League id={185553}/>
+      </AppContainer>
+    </Provider>
   );
 }
 

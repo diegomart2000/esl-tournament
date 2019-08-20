@@ -1,29 +1,28 @@
-import {
-  League,
+import { League } from '../../types';
 
+import {
   GET_LEAGUE,
   GET_LEAGUE_SUCCESS,
   GET_LEAGUE_ERROR,
 
-  LeageActionTypes,
+  LeagueActionTypes,
 } from './types/LeagueTypes';
 
-// TypeScript infers that this function is returning SendMessageAction
-export function getLeague(id: number): LeageActionTypes {
+export function getLeague(id: number): LeagueActionTypes {
   return {
     type: GET_LEAGUE,
     payload: id
   }
 }
 
-export function getLeagueSuccess(league: League): LeageActionTypes {
+export function getLeagueSuccess(league: League): LeagueActionTypes {
   return {
     type: GET_LEAGUE_SUCCESS,
-    payload: league
+    payload: { league }
   }
 }
 
-export function getLeagueError(error: any): LeageActionTypes {
+export function getLeagueError(error: any): LeagueActionTypes {
   return {
     type: GET_LEAGUE_ERROR,
     payload: error

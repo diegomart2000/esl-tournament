@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
-import league from './LeagueReducer';
+import league, { LeagueState } from './LeagueReducer';
 
-const rootReducer = combineReducers({
+export interface State {
+  league: LeagueState;
+};
+
+const rootReducer = combineReducers<State>({
   league,
 });
 
-export type AppState = ReturnType<typeof rootReducer>
+export default rootReducer;

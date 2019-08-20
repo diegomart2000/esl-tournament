@@ -1,5 +1,7 @@
-import party from './PartySagas';
+import { rootSaga as league } from './LeagueSagas';
+import { rootSaga as result } from './ResultSagas';
 
 export default [
-  party,
+  league,
+  result,
 ];
