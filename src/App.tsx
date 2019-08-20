@@ -7,7 +7,9 @@ import store from './store';
 import League from './components/League';
 
 const AppContainer = styled.div`
-  padding: 4rem;
+  @media (min-width: 768px) {
+    padding: 4rem;
+  }
 `;
 
 const App: React.FC = () => {
