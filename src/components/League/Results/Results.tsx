@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import _ from 'lodash';
 
 import { Result } from '../../../types';
-import FormattedDate from '../../Common/Date';
+import { Loader } from '../../Common';
 
 import {
   ResultsFrame,
@@ -26,14 +26,13 @@ const sort = (results: Array<Result>, order: boolean): Array<Result> => {
 }
 
 const ResultsComponent: React.FC<Props> = (props: Props) => {
-  const { isFetching } = props;
-  let { results } = props;
+  const { isFetching, results } = props;
   const [ order, setOrder ] = useState(false);
 
   return (
     <ResultsFrame>
       <SortButton onClick={() => setOrder(!order)}>Date {order ? '▼' : '▲'}</SortButton>
-      {isFetching && <div>...</div>}
+      {isFetching && <Loader />}
       {results && sort(results, order).map((result: Result) => (
         <Item key={result.id} result={result} />
       ))}

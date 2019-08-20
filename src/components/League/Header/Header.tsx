@@ -1,7 +1,7 @@
 import React from 'react';
 import _ from 'lodash';
 
-import FormattedDate from  '../../Common/Date';
+import { Date as FormattedDate, Loader } from  '../../Common';
 
 import { League, Result } from '../../../types';
 
@@ -25,7 +25,7 @@ const LeagueHeader: React.FC<Props> = (props: Props) => {
   const { isFetching, league } = props;
   return (
     <Header>
-      {isFetching && `...`}
+      {isFetching && <Loader />}
       {league && (
         <div>
           <h3>
