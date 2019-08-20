@@ -1,4 +1,4 @@
-import { League } from '../../types';
+import { League } from 'types';
 
 import {
   GET_LEAGUE,

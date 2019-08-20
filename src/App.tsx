@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { Provider } from 'react-redux';
 
-import store from './store';
+import store from 'store';
 
-import League from './components/League';
+import League from 'components/League';
 
 const AppContainer = styled.div`
   @media (min-width: 768px) {

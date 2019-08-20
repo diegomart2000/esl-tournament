@@ -1,19 +1,19 @@
 import { takeLatest, call, put, all } from 'redux-saga/effects';
-import { fetchById } from '../../api/LeagueApi';
+import { fetchById } from 'api/LeagueApi';
 
 import {
   GET_LEAGUE,
   LeagueActionTypes,
-} from '../actions/types/LeagueTypes';
+} from 'store/actions/types/LeagueTypes';
 
 import {
   getLeagueSuccess,
   getLeagueError,
-} from '../actions/LeagueActions';
+} from 'store/actions/LeagueActions';
 
 import { 
   getResult
-} from '../actions/ResultsActions';
+} from 'store/actions/ResultsActions';
 
 // Party Fetch
 export function* doGetLeague(action: LeagueActionTypes) {

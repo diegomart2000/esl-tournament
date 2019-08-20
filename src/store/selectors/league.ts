@@ -1,9 +1,9 @@
 import _ from 'lodash';
 
 import { createSelector } from 'reselect';
-import { State } from '../reducers';
-import { LeagueState } from '../reducers/LeagueReducer';
-import { League, Result, Contestant } from '../../types';
+import { State } from 'store/reducers';
+import { LeagueState } from 'store/reducers/LeagueReducer';
+import { League, Result, Contestant } from 'types';
 
 const base = (state: State): LeagueState => state.league;
 

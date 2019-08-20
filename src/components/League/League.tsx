@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { League } from '../../types';
-import { getLeague } from '../../store/actions/LeagueActions';
+import { League } from 'types';
+import { getLeague } from 'store/actions/LeagueActions';
 
 import { 
   Frame,

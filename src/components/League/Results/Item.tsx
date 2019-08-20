@@ -1,6 +1,6 @@
 import React from 'react';
-import { Result } from '../../../types';
-import FormattedDate from '../../Common/Date';
+import { Result } from 'types';
+import FormattedDate from 'components/Common/Date';
 
 import {
   ResultItem,

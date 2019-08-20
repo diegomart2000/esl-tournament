@@ -1,4 +1,4 @@
-import { Result } from '../../../types';
+import { Result } from 'types';
 
 export const GET_RESULTS = 'GET_RESULTS';
 export const GET_RESULTS_SUCCESS = 'GET_RESULTS_SUCCESS';

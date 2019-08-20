@@ -4,7 +4,7 @@ import {
   GET_LEAGUE_ERROR,
 
   LeagueActionTypes,
-} from '../actions/types/LeagueTypes';
+} from 'store/actions/types/LeagueTypes';
 
 import {
   GET_RESULTS,
@@ -12,17 +12,15 @@ import {
   GET_RESULTS_ERROR,
 
   ResultActionTypes,
-} from '../actions/types/ResultTypes';
+} from 'store/actions/types/ResultTypes';
 
 import {
-  GET_CONTESTANTS,
   GET_CONTESTANTS_SUCCESS,
-  GET_CONTESTANTS_ERROR,
 
   ContestantActionTypes,
-} from '../actions/types/ContestantTypes';
+} from 'store/actions/types/ContestantTypes';
 
-import { League, Result, Contestant } from '../../types';
+import { League, Result, Contestant } from 'types';
 
 export interface LeagueState {
   isFetching: boolean,

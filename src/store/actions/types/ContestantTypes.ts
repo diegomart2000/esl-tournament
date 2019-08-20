@@ -1,4 +1,4 @@
-import { Contestant } from '../../../types';
+import { Contestant } from 'types';
 
 export const GET_CONTESTANTS = 'GET_CONTESTANTS';
 export const GET_CONTESTANTS_SUCCESS = 'GET_CONTESTANTS_SUCCESS';

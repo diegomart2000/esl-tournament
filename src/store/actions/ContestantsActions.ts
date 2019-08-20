@@ -1,4 +1,4 @@
-import { Contestant } from '../../types';
+import { Contestant } from 'types';
 
 import {
   GET_CONTESTANTS,

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import _ from 'lodash';
 
-import { Result } from '../../../types';
-import { Loader } from '../../Common';
+import { Result } from 'types';
+import { Loader } from 'components/Common';
 
 import {
   ResultsFrame,

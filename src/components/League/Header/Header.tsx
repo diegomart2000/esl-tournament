@@ -1,9 +1,9 @@
 import React from 'react';
 import _ from 'lodash';
 
-import { Date as FormattedDate, Loader } from  '../../Common';
+import { Date as FormattedDate, Loader } from  'components/Common';
 
-import { League, Result } from '../../../types';
+import { League, Result } from 'types';
 
 import {
   Header,

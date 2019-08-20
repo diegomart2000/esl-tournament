@@ -1,4 +1,4 @@
-import { League } from '../../../types';
+import { League } from 'types';
 
 export const GET_LEAGUE = 'GET_LEAGUE';
 export const GET_LEAGUE_SUCCESS = 'GET_LEAGUE_SUCCESS';

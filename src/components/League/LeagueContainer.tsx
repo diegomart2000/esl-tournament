@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import { State } from '../../store';
-import { getLeague } from '../../store/actions/LeagueActions';
-import { isFetchingSelector, isFetchingResultsSelector, fullLeagueSelector, errorSelector } from '../../store/selectors/league';
+import { State } from 'store';
+import { getLeague } from 'store/actions/LeagueActions';
+import { isFetchingSelector, isFetchingResultsSelector, fullLeagueSelector, errorSelector } from 'store/selectors/league';
 
 import LeagueComponent from './League';
 
