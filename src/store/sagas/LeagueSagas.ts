@@ -24,7 +24,7 @@ export function* doGetLeague(action: LeagueActionTypes) {
     const response = yield call(fetchById, id);
     yield put(getLeagueSuccess(response));
   } catch (error) {
-    yield put(getLeagueError(error.response.data));
+    yield put(getLeagueError(error));
   }
 }
 

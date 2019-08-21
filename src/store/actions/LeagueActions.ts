@@ -25,6 +25,6 @@ export function getLeagueSuccess(league: League): LeagueActionTypes {
 export function getLeagueError(error: any): LeagueActionTypes {
   return {
     type: GET_LEAGUE_ERROR,
-    payload: error
+    payload: { error }
   }
 }

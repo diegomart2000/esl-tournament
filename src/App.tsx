@@ -16,7 +16,7 @@ const App: React.FC = () => {
   return (
     <Provider store={store}>
       <AppContainer>
-        <League id={185553}/>
+        <League id={0}/>
       </AppContainer>
     </Provider>
   );

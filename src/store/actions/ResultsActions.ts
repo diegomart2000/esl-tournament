@@ -25,6 +25,6 @@ export function getResultSuccess(results: Array<Result>): ResultActionTypes {
 export function getResultError(error: any): ResultActionTypes {
   return {
     type: GET_RESULTS_ERROR,
-    payload: error
+    payload: { error }
   }
 }
