@@ -13,10 +13,12 @@ const AppContainer = styled.div`
 `;
 
 const App: React.FC = () => {
+  const id: number = parseInt(window.location.pathname.replace(/\//, '') || '185553');
+
   return (
     <Provider store={store}>
       <AppContainer>
-        <League id={0}/>
+        <League id={id}/>
       </AppContainer>
     </Provider>
   );
